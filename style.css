@@ -1,0 +1,98 @@
+@media (min-width:360px ) {
+  .body__nav {
+    font-size: 15px;
+  }
+}
+
+@media (min-width:641px) {
+  .body__nav {
+    font-size: 25px;
+  }
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+  .body__nav {
+    font-size: 27px;
+  }
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen
+and (min-width : 321px) {
+  .body__nav {
+    font-size: 29px;
+  }
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen
+and (max-width : 320px) {
+  .body__nav {
+    font-size: 23px;
+  }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+  .body__nav {
+    font-size: 30px;
+  }
+}
+
+/* iPads (landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+  .body__nav {
+    font-size: 24px;
+  }
+}
+
+/* iPads (portrait) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+  .body__nav {
+    font-size: 21px;
+  }
+}
+
+/* Desktops and laptops ----------- */
+@media only screen
+and (min-width : 1224px) {
+  .body__nav {
+    font-size: 35px;
+  }
+}
+
+/* Large screens ----------- */
+@media only screen
+and (min-width : 1824px) {
+  .body__nav {
+    font-size: 28px;
+  }
+}
+/* (iPhone 6) ----------- */
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px) {
+  .body__nav {
+    font-size: 21px;
+  }
+}
+
+/*iPhone 6 Plus in portrait & landscape ----------- */
+@media only screen
+and (min-device-width : 414px)
+and (max-device-width : 736px) {
+  .body__nav {
+    font-size: 25px;
+  }
+}
