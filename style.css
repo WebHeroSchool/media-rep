@@ -1,3 +1,42 @@
+<style>
+body{ font-family:arial; }
+.menu_nav {
+display: flex;
+justify-content: flex-end; /* разместим справа */
+background: #008aff;
+}
+
+.menu_nav a {
+color:#fff;
+padding:15px 10px;
+text-decoration:none;
+text-align:center;
+}
+
+.nav a:hover { background:#5c8db7; }
+/* меньше 800px */
+@media all and (max-width: 800px) {
+.nav { justify-content: space-around; }
+.nav a{ flex-grow:1; /* растягиваться на всю ширину */ }
+}
+/* меньше 500px */
+@media all and (max-width: 500px) {
+.nav { flex-direction: column; }
+}
+</style>
+
+@media (min-width:360px ) {
+  .body__nav {
+    font-size: 15px;
+  }
+}
+
+@media (min-width:641px) {
+  .body__nav {
+    font-size: 25px;
+  }
+}
+
 @media (min-width:360px ) {
   .body__nav {
     font-size: 15px;
