@@ -1,31 +1,122 @@
-<style>
-body{ font-family:arial; }
-.menu_nav {
-display: flex;
-justify-content: flex-end; /* разместим справа */
-background: #008aff;
+*{
+  padding: 0;
+margin: 0;
+box-sizing: border-box;
 }
 
-.menu_nav a {
-color:#fff;
-padding:15px 10px;
-text-decoration:none;
-text-align:center;
+.wrapper{
+  margin: 200px auto;
+  width: 320px;
+  background-color: #000;
+  position: relative;
+  color: white;
+  text-align: center;
+  height: 40px;
+  font-family: Arial;
 }
 
-.nav a:hover { background:#5c8db7; }
+#check-menu{
+display: none;
+}
+
+label{
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  z-index: 2;
+  line-height: 40px;
+}
+
+.burger-line{
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  width: 35px;
+  height: 2px;
+  background-color: #fff;
+  transition: .5s all;
+
+}
+
+.second, .third {
+  top: 18px;
+}
+
+.fourth{
+  top: 28px;
+}
+
+.main-menu{
+  display: block;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  transform: translateY(100%);
+    max-height: 0;
+    font-size: 0;
+    overflow: hidden;
+    transition: .5s all;
+}
+
+a{
+  display: block;
+  width: 100%;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  border-top: 1px solid rgba(255,255,255,.3);
+  background-color: #000;
+}
+
+#check-menu:checked ~ .main-menu {
+  max-height: 500px;
+  font-size: 16px;
+}
+
+#check-menu:checked ~ .first {
+  display: none;
+}
+
+#check-menu:checked ~ .second {
+  transform: rotate(45deg);
+}
+
+#check-menu:checked ~ .third {
+  transform: rotate(-45deg);
+}
+
+#check-menu:checked ~ .fourth {
+  display: none;
+}
+
+
+
 /* меньше 800px */
 @media all and (max-width: 800px) {
-.nav { justify-content: space-around; }
-.nav a{ flex-grow:1; /* растягиваться на всю ширину */ }
+  .nav {
+    justify-content: space-around;
+  }
+
+  .nav a {
+    flex-grow: 1;
+    /* растягиваться на всю ширину */
+  }
 }
+
 /* меньше 500px */
 @media all and (max-width: 500px) {
-.nav { flex-direction: column; }
-}
-</style>
+  .nav {
 
-@media (min-width:360px ) {
+    flex-direction: column;
+  }
+}
+
+@media (min-width:360px) {
   .body__nav {
     font-size: 15px;
   }
@@ -38,139 +129,69 @@ text-align:center;
 }
 
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen
-and (min-device-width : 320px)
-and (max-device-width : 480px) {
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
   .body__nav {
     font-size: 27px;
   }
 }
 
 /* Smartphones (landscape) ----------- */
-@media only screen
-and (min-width : 321px) {
+@media only screen and (min-width : 321px) {
   .body__nav {
     font-size: 29px;
   }
 }
 
 /* Smartphones (portrait) ----------- */
-@media only screen
-and (max-width : 320px) {
+@media only screen and (max-width : 320px) {
   .body__nav {
     font-size: 23px;
   }
 }
 
 /* iPads (portrait and landscape) ----------- */
-@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px) {
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
   .body__nav {
     font-size: 30px;
   }
 }
 
 /* iPads (landscape) ----------- */
-@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px)
-and (orientation : landscape) {
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
   .body__nav {
     font-size: 24px;
   }
 }
 
 /* iPads (portrait) ----------- */
-@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px)
-and (orientation : portrait) {
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
   .body__nav {
     font-size: 21px;
   }
 }
 
 /* Desktops and laptops ----------- */
-@media only screen
-and (min-width : 1224px) {
+@media only screen and (min-width : 1224px) {
   .body__nav {
     font-size: 35px;
   }
 }
 
 /* Large screens ----------- */
-@media only screen
-and (min-width : 1824px) {
+@media only screen and (min-width : 1824px) {
   .body__nav {
     font-size: 28px;
   }
 }
+
 /* (iPhone 6) ----------- */
-@media only screen
-and (min-device-width : 375px)
-and (max-device-width : 667px) {
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) {
   .body__nav {
     font-size: 21px;
   }
 }
 
 /*iPhone 6 Plus in portrait & landscape ----------- */
-@media only screen
-and (min-device-width : 414px)
-and (max-device-width : 736px) {
-  .body__nav {
-    font-size: 25px;
-  }
-}
+@media only screen and (min-device-width : 414px) and (max-device-width : 736px) {
 
-.c-hamburger {
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 0;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-  width: 96px;
-  height: 96px;
-  font-size: 0;
-  box-shadow: none;
-  cursor: pointer;
-}
-
-.c-hamburger:focus {
-  outline: none;
-}
-
-.c-hamburger:span {
-  display: block;
-  position: absolute;
-  top: 44px;
-  left: 18px;
-  right: 18px;
-  height: 8px;
-  background: #fff;
-}
-
-.c-hamburger span::before .c-hamburger span::after {
-  position: absolute;
-  display: block;
-  left: 0;
-  width: 100%;
-  height: 8px;
-  background: #fff;
-  content: "";
-}
-
-.c-hamburger span::before {
-  top: -20px;
-}
-
-.c-hamburger span::after {
-  bottom: 20px;
-}
-
-.c-hamburger {
-  background: #cb0032;
 }
